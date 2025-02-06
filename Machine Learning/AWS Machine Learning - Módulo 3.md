@@ -23,7 +23,7 @@
 - Otimização contínua do modelo
 
 #### Seção 1 - Formulando problemas de aprendizado de máquina
-**Perguntas a serem feitas:**
+**Perguntas a serem feitas:**  
 *Business*
 - Qual o problema a ser resolvido? qual objetivo quero alcançar?
 - Como essa tarefa é executada atualmente?
@@ -38,27 +38,27 @@
 - Possuo acesso aos dados?
 - Qual a solução mais simples? Como seria solucionado manualmente?
 
-#### Seção 2 - Coleta e proteção de dados
-**Quais dados eu preciso?**
+#### Seção 2 - Coleta e proteção de dados  
+**Quais dados eu preciso?**  
 - Quantos dados eu tenho e onde eles estão?
 - Tenho acesso aos dados?
 - Qual soluçao posso usar para centralizar os dados?
 
-**Fontes de dados**
-*Dados Privados*
+**Fontes de dados**  
+*Dados Privados*  
 - Os clientes que criam
 
-*Dados Comerciais*
+*Dados Comerciais*  
 - AWS Data Exchange, AWS Marketplace e outros provedores externos
 
-*Dados Open Source*
+*Dados Open Source*  
 - Kaggle
 - OMS
 - EUA Census Bureau
 - UCI Machine Learning Repository
 
-**Observações**
-- São uma grande quantidade de dados, usados em casos que a resposta ou previsão já é conhecida
+**Observações**  
+- São uma grande quantidade de dados, usados em casos que a resposta ou previsão já é conhecida  
 - Recurso e Destino / Feature and Target
 
 **Ferramentas para armazenar dados na AWS**
@@ -104,17 +104,19 @@ with os.scandir(folder) as dir:
 				Filename=os.path.join(folder, f.name),
 				Key=f.name, Bucket=bucket)
 ```
+
 ##### Seção 2B - Protegendo dados
+
 **AWS Identity and Access (IAM)**
 - Políticas para controle de acesso
 ```python
 "Statement": [
     {
 	"Sid": "Stmt1583974365198",
-	"Action": ["s3:GetObject"], 							#GetObject limita o acesso a somente leitura
-	"Effect": "Allow", 			    						#Allow permite a ação
+	"Action": ["s3:GetObject"], 				#GetObject limita o acesso a somente leitura
+	"Effect": "Allow", 			    		#Allow permite a ação
 	"Resource": "arn:aws:s3:::awsmachinelearningrepo/*", 	#Somente para este bucket
-	"Principal": {"AWS": ["DataReaderRole"]}, 				#Apenas por essa função do IAM
+	"Principal": {"AWS": ["DataReaderRole"]}, 		#Apenas por essa função do IAM
     }
 ]
 ```

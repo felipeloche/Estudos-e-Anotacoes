@@ -9,19 +9,19 @@
 
 ##### Seção 1 - O que é ML?
 
-- Um subdominio de IA, tendo Deep Learning como seu próprio subdominio.
+- Um subdominio de IA, tendo Deep Learning como seu próprio subdominio.  
 Inteligência Artificial(Machine Learning(Deep Learning))
-- ML é o estudo de algoritmos e modelos estatisticos para executar uma tarefa usando inferência em vez de instruções.
+- ML é o estudo de algoritmos e modelos estatisticos para executar uma tarefa usando inferência em vez de instruções.  
 Dados -> Modelo -> Previsão.
-- **Linha do Tempo**:
-Computação Tradicional ->
-Computação em nuvem e a lei de Moore ->
+- **Linha do Tempo**:  
+Computação Tradicional ->  
+Computação em nuvem e a lei de Moore ->  
 Machine Learning moderno.
 
-- **Resumo**:
-**IA**: Máquinas que executam tarefas humanas
-**ML**: Modelos de treinamento para fazer previsões
-**Deep Learning**: Redes Neurais
+- **Resumo**:  
+**IA**: Máquinas que executam tarefas humanas  
+**ML**: Modelos de treinamento para fazer previsões  
+**Deep Learning**: Redes Neurais  
 Avanços tecnológicos e econômicos tornaram machine learning mais acessível para indivíduos e organizações.
 
 
