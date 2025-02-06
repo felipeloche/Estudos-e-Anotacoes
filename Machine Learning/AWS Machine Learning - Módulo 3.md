@@ -111,10 +111,10 @@ with os.scandir(folder) as dir:
 "Statement": [
     {
 	"Sid": "Stmt1583974365198",
-	"Action": ["s3:GetObject"], 							#GetObject limita o acesso a somente leitura
-	"Effect": "Allow", 			    						#Allow permite a ação
+	"Action": ["s3:GetObject"], 				#GetObject limita o acesso a somente leitura
+	"Effect": "Allow", 			    		#Allow permite a ação
 	"Resource": "arn:aws:s3:::awsmachinelearningrepo/*", 	#Somente para este bucket
-	"Principal": {"AWS": ["DataReaderRole"]}, 				#Apenas por essa função do IAM
+	"Principal": {"AWS": ["DataReaderRole"]}, 		#Apenas por essa função do IAM
     }
 ]
 ```
