@@ -1,4 +1,4 @@
-# Livro Entendo Algoritmos
+# Livro Entendendo Algoritmos
 # Capítulo 1 - Introdução a Algoritmos
 
 **Pesquisa Binária**
