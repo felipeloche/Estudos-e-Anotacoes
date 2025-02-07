@@ -44,8 +44,8 @@ Forneça o tempo de execução para cada um dos casos a seguir em termos da nota
 **1.5** Você quer ler os números de cada pessoa da agenda telefônica
 **R.: O(n)**
 
-**1.6** Você quer ler os números apenas dos nomes que começam com A.
-(Isso é complicado! Este algoritmo envolve conceitos que são abordados mais profundamente no capítulo 4)
+**1.6** Você quer ler os números apenas dos nomes que começam com A.  
+(Isso é complicado! Este algoritmo envolve conceitos que são abordados mais profundamente no capítulo 4)  
 **R.: O(n)**  
 Mesmo que seja para apenas 1 dos 26 caracteres. No capítulo 4 será explicado sobre constantes na notação Big O
 
