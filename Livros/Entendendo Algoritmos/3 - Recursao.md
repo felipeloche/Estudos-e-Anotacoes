@@ -8,8 +8,8 @@ def regressiva(i):
 ```
 - Ao escrever uma função recursiva, deve informar quando ela deve parar
 - Toda função recursiva tem duas partes:
-- Caso-recursivo: Quando a função chama a si mesma
-- Caso-base: Quando a função não chama a si mesma novamente, evitando um loop infinito
+    - Caso-recursivo: Quando a função chama a si mesma
+    - Caso-base: Quando a função não chama a si mesma novamente, evitando um loop infinito
 ```python
 def regressiva(i):
     print (i)
@@ -33,13 +33,13 @@ def tchau():
     print("ok, tchau!")
 ```
 
-**Exercicios**
+**Exercicios**  
 **3.1** - Suponha que eu forneça uma pilha de chamada como esta:  
  Sauda 2: [Nome: "Maggie"]  
  Sauda: [Nome: "Maggie"]  
 Quais informações você pode retirar baseando-se apenas nesta pilha de chamada?  
-**R.:** A função Sauda é chamada primeiro com o nome Maggie para posteriormente a Sauda 2 ser chamada;  
- A atual função chamada é Sauda 2, após a execução da mesma, voltará para a Sauda.
+**R.: A função Sauda é chamada primeiro com o nome Maggie para posteriormente a Sauda 2 ser chamada;**  
+ **A atual função chamada é Sauda 2, após a execução da mesma, voltará para a Sauda.**
 
 **Função recursiva para calcular fatorial**
 ```python
@@ -52,7 +52,7 @@ def fat(x):
 **3.2** - Suponha que você acidentalmente escreva uma função recursiva que fique executando infinitamente.  
 Como você viu, seu computador aloca memória na pilha para cada chamada de função.  
 O que acontece com a pilha quando a função recursiva fica executando infinitamente?  
-**R.:** A pilha cresce eternamente. Quando o programa fica sem espaço, ele é finalizado com erro de overflow da pilha
+**R.: A pilha cresce eternamente. Quando o programa fica sem espaço, ele é finalizado com erro de overflow da pilha**
 
 #### Recapitulando:
 - Recursão é quando uma função chama a si mesma
