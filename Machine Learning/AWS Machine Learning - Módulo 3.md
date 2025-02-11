@@ -22,7 +22,7 @@
 - Avaliação da precisão
 - Otimização contínua do modelo
 
-#### Seção 1 - Formulando problemas de aprendizado de máquina
+## Seção 1 - Formulando problemas de aprendizado de máquina
 **Perguntas a serem feitas:**  
 *Business*
 - Qual o problema a ser resolvido? qual objetivo quero alcançar?
@@ -38,7 +38,7 @@
 - Possuo acesso aos dados?
 - Qual a solução mais simples? Como seria solucionado manualmente?
 
-#### Seção 2 - Coleta e proteção de dados  
+## Seção 2 - Coleta e proteção de dados  
 **Quais dados eu preciso?**  
 - Quantos dados eu tenho e onde eles estão?
 - Tenho acesso aos dados?
@@ -75,7 +75,7 @@
 - Amazon Timestreamn
 	- Banco de dados de séries temporais gerenciado, projetado para IoT e aplicações que geram dados em sequência temporal.
 
-##### Seção 2A - ETL
+### Seção 2A - ETL
 **ETL com AWS Glue**
 - Pode unir diferentes dados e emitir um único endpoint
 - É possível criar uma função pelo AWS Lambda para, sempre que for criado algo, extrair os dados do S3 para o Glue.
@@ -105,7 +105,7 @@ with os.scandir(folder) as dir:
 				Key=f.name, Bucket=bucket)
 ```
 
-##### Seção 2B - Protegendo dados
+### Seção 2B - Protegendo dados
 
 **AWS Identity and Access (IAM)**
 - Políticas para controle de acesso
@@ -126,10 +126,10 @@ with os.scandir(folder) as dir:
 **Auditoria**
 - AWS CloudTrail monitora a atividade do usuário e o uso da API
 
-# Laboratório 3.1
-### [Amazon SageMaker - Criação e importação de dados](https://github.com/felipeloche/Estudos-e-Anotacoes/tree/main/Machine%20Learning)
+#@ Laboratório 3.1
+### [Amazon SageMaker - Criação e importação de dados](https://github.com/felipeloche/Estudos-e-Anotacoes/blob/main/Laboratorio%201%20-%20Criacao%20e%20Importacao%20de%20Dados.md)
 
-# Seção 3 - Avaliando os dados
+## Seção 3 - Avaliando os dados
 - Formatar dados
 - Examinar tipos de dados
 - Executar estatísticas descritivas
@@ -154,12 +154,12 @@ import panda as pd
 url = "https://somewhere.com/winequality-red.csv"
 df_wine = pd.read_csv(url, ';')
 ```
-**Nomes de índice e coluna
+**Nomes de índice e coluna**
 ```python
 df_wine.columns #refere-se ao nome das colunas 
 dw_wine.index #refere-se aos rótulos das linhas
 ```
-**Esquema DataFrame
+**Esquema DataFrame**
 ```python
 df_wine.dtypes #mostra os tipos de dados de cada coluna 
 dw_wine.info() #fornece um resumo mais completo e datalhado do DataFrame
