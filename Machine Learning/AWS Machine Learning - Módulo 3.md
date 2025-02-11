@@ -125,3 +125,42 @@ with os.scandir(folder) as dir:
 
 **Auditoria**
 - AWS CloudTrail monitora a atividade do usuário e o uso da API
+
+# Laboratório 3.1
+### [Amazon SageMaker - Criação e importação de dados](https://github.com/felipeloche/Estudos-e-Anotacoes/tree/main/Machine%20Learning)
+
+# Seção 3 - Avaliando os dados
+- Formatar dados
+- Examinar tipos de dados
+- Executar estatísticas descritivas
+- Visualizar dados  
+
+Antes de executar estatísticas em seus dados, você deve garantir que eles estejam no formato correto para análise.  
+Exemplo:  
+
+```json
+"Customer:ABC,DateOfTransation:10/5,Vendor:Store1,ChargeAmount:10.99,WasThisFraud:No..."
+```
+
+|   Customer  |  DateTran.  |   Vendor    | ChargeAmt.  |  WasFraud?  |
+|-------------|-------------|-------------|-------------|-------------|
+|    ABC      |   10/5      | Store1      |   10.99     |      No     |  
+
+**Pandas**
+- Reformata dados em representação tabular (DataFrame)
+- Converte formatos comuns como CSV, JSON e outros
+```python
+import panda as pd
+url = "https://somewhere.com/winequality-red.csv"
+df_wine = pd.read_csv(url, ';')
+```
+**Nomes de índice e coluna
+```python
+df_wine.columns #refere-se ao nome das colunas 
+dw_wine.index #refere-se aos rótulos das linhas
+```
+**Esquema DataFrame
+```python
+df_wine.dtypes #mostra os tipos de dados de cada coluna 
+dw_wine.info() #fornece um resumo mais completo e datalhado do DataFrame
+```
