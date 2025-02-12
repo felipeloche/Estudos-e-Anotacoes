@@ -126,8 +126,8 @@ with os.scandir(folder) as dir:
 **Auditoria**
 - AWS CloudTrail monitora a atividade do usuário e o uso da API
 
-#@ Laboratório 3.1
-### [Amazon SageMaker - Criação e importação de dados](https://github.com/felipeloche/Estudos-e-Anotacoes/blob/main/Laboratorio%201%20-%20Criacao%20e%20Importacao%20de%20Dados.md)
+## Laboratório 3.1
+### [Amazon SageMaker - Criação e importação de dados](https://github.com/felipeloche/Estudos-e-Anotacoes/blob/main/Machine%20Learning/Laboratorio%201%20-%20Criacao%20e%20Importacao%20de%20Dados.md)
 
 ## Seção 3 - Avaliando os dados
 - Formatar dados
@@ -164,3 +164,74 @@ dw_wine.index #refere-se aos rótulos das linhas
 df_wine.dtypes #mostra os tipos de dados de cada coluna 
 dw_wine.info() #fornece um resumo mais completo e datalhado do DataFrame
 ```
+###Seção 3A - Descrevendo seus dados
+**Estatisticas Descritivas**
+- Estatísticas gerais
+	- Indica, por exemplo, o número de linhas e colunas dos dados
+- Estatísticas multivariadas
+	- Para examinar relações entre mais de uma variável
+- Estatísticas de atributo
+	- Especificos para atributos numéricos
+	- Propriedades como média, desvio padrão, variação e valores mínimos e máximos
+```python
+df_wine.describe() 
+df_car.head(5) 
+df_car.describe() 
+```
+**Plotagem de estatísticas de atributo**
+```python
+df_wine['sulfatos'].hist(bins=10)
+df_wine['sulfatos'].plot.kde()
+df_wine['sulfatos'].plot.box()
+```
+```python
+df_wine.plot.scatter(
+	x='alcool',
+	y='sulfatos')
+	
+pd.plotting.scatter_matrix(
+	df_wine[['acido citrico',
+		'alcool',
+		'sulfatos']])
+```
+
+**Gráfico de dispersão com identificação**
+```python
+high = df_wine[['sulfatos','alcool']][df_wine['qualidade']>5]
+low = df_wine[['sulfatos','alcool']][df_wine['qualidade']<=5]
+
+plt.scatter(high['sulfatos'],high['alcool'],s=50,c='blue',marker='o',label='great')
+plt.scatter(x=low['sulfatos'],y=low['alcool'],s=50,c='red',marker='v',label='poor')
+```
+
+### Seção 3B - Encontrando correlações
+**Matriz de correlação**
+```python
+corr_matrix = df_wine.corr()
+corr_matrix["qualidade"].sort_values(ascending=False)
+```
+**Mapa de calor da matriz de correlação**
+```python
+import seaborn as sns
+
+correlations = df_wine.corr()
+fig, ax = plt.subplots(figsize=(10, 10))
+
+colormap =
+	sns.color_palette("BrBG", 10)
+	
+sns.heatmap(correlations,
+	cmap=colormap,
+	annot=True,
+	fmt=".2f")
+	
+ax.set_yticklabels(colum_names);
+
+plt.show()
+```
+
+# Principais lições da Seção 3
+- A primeira etapa na avaliação de dados é garantir que eles estejam no formato correto
+- pandas é uma lib Python popular para trabalhar com dados
+- Estatísticas descritivas são usadas para saber mais sobre o conjunto de dados
+- Crie visualizações com pandas para examinar os dados com mais detalhes
