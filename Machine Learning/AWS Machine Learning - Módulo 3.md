@@ -127,7 +127,7 @@ with os.scandir(folder) as dir:
 - AWS CloudTrail monitora a atividade do usuário e o uso da API
 
 ## Laboratório 3.1
-### [Amazon SageMaker - Criação e importação de dados](https://github.com/felipeloche/Estudos-e-Anotacoes/blob/main/Laboratorio%201%20-%20Criacao%20e%20Importacao%20de%20Dados.md)
+### [Amazon SageMaker - Criação e importação de dados](https://github.com/felipeloche/Estudos-e-Anotacoes/blob/main/Machine%20Learning/Laboratorio%201%20-%20Criacao%20e%20Importacao%20de%20Dados.md)
 
 ## Seção 3 - Avaliando os dados
 - Formatar dados
@@ -178,7 +178,7 @@ df_wine.describe()
 df_car.head(5) 
 df_car.describe() 
 ```
-*Plotagem de estatísticas de atributo*
+**Plotagem de estatísticas de atributo**
 ```python
 df_wine['sulfatos'].hist(bins=10)
 df_wine['sulfatos'].plot.kde()
@@ -230,8 +230,8 @@ ax.set_yticklabels(colum_names);
 plt.show()
 ```
 
-# Principai lições da Seção 3
-- A primeira etapa na avaliação de dados é garantis que eles estejam no formato correto
+# Principais lições da Seção 3
+- A primeira etapa na avaliação de dados é garantir que eles estejam no formato correto
 - pandas é uma lib Python popular para trabalhar com dados
 - Estatísticas descritivas são usadas para saber mais sobre o conjunto de dados
 - Crie visualizações com pandas para examinar os dados com mais detalhes
